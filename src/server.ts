@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express';
 import * as Sentry from "@sentry/node";
+import "../instrument.mjs";
 
 const app = express();
 const PORT = process.env.PORT || 3000;

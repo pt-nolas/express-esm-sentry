@@ -9,5 +9,10 @@ Sentry.init({
   tracesSampleRate: 1.0,
   sendDefaultPii: true,
   enableLogs: true,
-  debug: true
+  debug: true,
+  integrations: [
+    Sentry.httpIntegration({
+      dropSpansForIncomingRequestStatusCodes: [], // disables dropping for all status codes
+    }),
+  ],
 });
